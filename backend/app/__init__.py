@@ -1,0 +1,2 @@
+"""SmartGalleryAI backend package."""
+
