@@ -1,5 +1,7 @@
 # SmartGalleryAI
 
+![banner](assets/banner.png)
+
 SmartGalleryAI 是一个本地优先的智能图库开源项目构想与 Python 后端脚手架。它的目标不是再做一个普通相册，而是把图片自动整理成可检索、可分析、可扩展的个人视觉知识库。
 
 ## 项目定位
@@ -40,11 +42,11 @@ uvicorn app.main:app --reload --app-dir backend
 
 数据库 schema 由 Alembic 管理。首次启动或代码升级后请先执行 `alembic upgrade head`。
 
-访问：
+访问（示例用 8420 端口，避免与本机其他服务如 Django(8000) 冲突；启动示例 `uvicorn app.main:app --port 8420 --app-dir backend`）：
 
-- 图库工作台：http://127.0.0.1:8000/app
-- API 文档：http://127.0.0.1:8000/docs
-- 健康检查：http://127.0.0.1:8000/api/v1/health
+- 图库工作台：http://127.0.0.1:8420/app
+- API 文档：http://127.0.0.1:8420/docs
+- 健康检查：http://127.0.0.1:8420/api/v1/health
 
 当前前端会优先显示缩略图；如果开发环境尚未安装 Pillow，后端会回退到原图预览，服务仍可启动和浏览图片。
 
@@ -60,7 +62,7 @@ $env:SMART_GALLERY_OCR_PROVIDER="paddleocr"
 启动服务后调用：
 
 ```powershell
-curl.exe -X POST http://127.0.0.1:8000/api/v1/assets/scan `
+curl.exe -X POST http://127.0.0.1:8420/api/v1/assets/scan `
   -H "Content-Type: application/json" `
   -d "{\"root_path\":\"D:\\Pictures\"}"
 ```
@@ -75,7 +77,7 @@ curl.exe -X POST http://127.0.0.1:8000/api/v1/assets/scan `
 批量分析示例：
 
 ```powershell
-curl.exe -X POST http://127.0.0.1:8000/api/v1/assets/analyze `
+curl.exe -X POST http://127.0.0.1:8420/api/v1/assets/analyze `
   -H "Content-Type: application/json" `
   -d "{\"filter\":\"unanalyzed\",\"limit\":50,\"reanalyze\":false}"
 ```
