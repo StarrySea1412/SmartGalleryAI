@@ -2,6 +2,8 @@
 
 ![banner](assets/banner.png)
 
+![技术栈全景图](assets/tech-stack.png)
+
 SmartGalleryAI 是一个本地优先的智能图库开源项目构想与 Python 后端脚手架。它的目标不是再做一个普通相册，而是把图片自动整理成可检索、可分析、可扩展的个人视觉知识库。
 
 ## 项目定位
@@ -87,7 +89,6 @@ curl.exe -X POST http://127.0.0.1:8420/api/v1/assets/analyze `
 - [技术栈书](docs/TECH_STACK.md)
 - [产品构思](docs/PRODUCT_BLUEPRINT.md)
 - [架构说明](docs/ARCHITECTURE.md)
-- [路线图](docs/ROADMAP.md)
 - [MVP 执行计划](docs/MVP_EXECUTION_PLAN.md)
 
 ## 开源方向
