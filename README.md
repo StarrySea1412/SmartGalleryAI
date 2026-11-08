@@ -4,7 +4,7 @@
 
 ![技术栈全景图](assets/tech-stack.png)
 
-SmartGalleryAI 是一个本地优先的智能图库开源项目构想与 Python 后端脚手架。它的目标不是再做一个普通相册，而是把图片自动整理成可检索、可分析、可扩展的个人视觉知识库。
+本地优先的智能图库：**OCR + 语义检索 + 相似图**。FastAPI + SQLAlchemy + Alembic + docker-compose。目标不是再做一个普通相册，而是把图片自动整理成可检索、可分析、可扩展的个人视觉知识库。
 
 ## 项目定位
 
